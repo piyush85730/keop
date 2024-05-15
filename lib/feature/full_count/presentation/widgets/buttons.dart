@@ -10,7 +10,7 @@ class Buttons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 35),
+      margin: const EdgeInsets.only(bottom: 40),
       child: Row(
         children: [
           Expanded(
@@ -37,7 +37,7 @@ class Buttons extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(width: 10),
+          const SizedBox(width: 5),
           Expanded(
             child: GestureDetector(
               onTap: () {},

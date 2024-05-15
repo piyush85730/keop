@@ -12,7 +12,7 @@ class Items extends StatelessWidget {
       children: [
         Expanded(
           child: itemsItem(
-            height: 140,
+            height: 135,
             margin: const EdgeInsets.only(left: 20),
             child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -22,22 +22,18 @@ class Items extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 30,
                     color: ThemeColors.clrItemGreen,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 SizedBox(height: 20),
                 Text(
                   StringConstants.strItemsCounted,
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: ThemeColors.clrWhite,
-                  ),
+                  style: TextStyle(fontSize: 16, color: ThemeColors.clrWhite),
                 ),
+                SizedBox(height: 5),
                 Text(
                   StringConstants.strNothingCounted,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: ThemeColors.clrWhite,
-                  ),
+                  style: TextStyle(fontSize: 12, color: ThemeColors.clrWhite),
                 ),
               ],
             ),
@@ -46,7 +42,7 @@ class Items extends StatelessWidget {
         const SizedBox(width: 20),
         Expanded(
           child: itemsItem(
-            height: 140,
+            height: 135,
             margin: const EdgeInsets.only(right: 20),
             child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -56,22 +52,18 @@ class Items extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 30,
                     color: ThemeColors.clrItemYellow,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 SizedBox(height: 20),
                 Text(
                   StringConstants.strItemsRemaining,
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: ThemeColors.clrWhite,
-                  ),
+                  style: TextStyle(fontSize: 16, color: ThemeColors.clrWhite),
                 ),
+                SizedBox(height: 5),
                 Text(
                   "100% ${StringConstants.strOf} 4,605",
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: ThemeColors.clrWhite,
-                  ),
+                  style: TextStyle(fontSize: 12, color: ThemeColors.clrWhite),
                 ),
               ],
             ),

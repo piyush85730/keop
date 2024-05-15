@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:keop/core/constants/string_constants.dart';
 import 'package:keop/core/constants/theme_constants.dart';
 
 class ChangeLocation extends StatelessWidget {
@@ -10,7 +11,7 @@ class ChangeLocation extends StatelessWidget {
     return Container(
       height: 50,
       width: double.maxFinite,
-      color: ThemeColors.clrBg.withOpacity(0.5),
+      color: ThemeColors.clrDarkGray,
       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 13),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -24,7 +25,7 @@ class ChangeLocation extends StatelessWidget {
           ),
           GestureDetector(
             child: const Text(
-              "change location",
+              StringConstants.strChangeLocation,
               style: TextStyle(
                 fontSize: 11,
                 color: ThemeColors.clrText2,

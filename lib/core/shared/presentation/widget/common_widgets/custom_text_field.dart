@@ -33,7 +33,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      cursorColor: ThemeColors.clrBlack,
+      cursorColor: ThemeColors.clrWhite,
       textAlignVertical: TextAlignVertical.center,
       readOnly: isReadOnly ?? false,
       controller: controller,
@@ -48,11 +48,10 @@ class CustomTextField extends StatelessWidget {
         if (onChanges != null) {
           onChanges!(data);
         }
-
       },
       decoration: InputDecoration(
         isDense: true,
-        contentPadding: const EdgeInsets.symmetric(vertical: 15),
+        contentPadding: const EdgeInsets.only(bottom: 15),
         alignLabelWithHint: true,
         hintText: hint,
         hintStyle: Theme.of(context).textTheme.bodyLarge?.copyWith(
@@ -69,6 +68,7 @@ class CustomTextField extends StatelessWidget {
               color: ThemeColors.clrWhite,
             ),
         suffixIcon: suffixIcon,
+        floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
     );
   }

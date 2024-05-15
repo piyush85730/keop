@@ -6,6 +6,7 @@ class SignInController extends GetxController {
   Rxn<TextEditingController> passwordController = Rxn<TextEditingController>();
   RxBool isPasswordVisible = false.obs;
   RxBool isLoading = false.obs;
+  RxBool isChecked = false.obs;
 
   @override
   void onInit() {
@@ -20,8 +21,7 @@ class SignInController extends GetxController {
         userNameController.value!.text.length > 2;
 
     final passwordValid = passwordController.value!.text.isNotEmpty &&
-        RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$')
-            .hasMatch(passwordController.value!.text);
+        passwordController.value!.text.length >= 8;
 
     return (emailValid && passwordValid).obs;
   }

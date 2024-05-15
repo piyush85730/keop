@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:keop/core/constants/image_constants.dart';
@@ -132,14 +133,20 @@ class _SignInScreenState extends State<SignInScreen> {
                     : Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          IconButton(
-                            icon: Icon(
-                              signInController.isPasswordVisible.value
-                                  ? Icons.remove_red_eye
-                                  : Icons.remove_red_eye_outlined,
-                              color: ThemeColors.clrWhite,
+                          GestureDetector(
+                            child: Container(
+                              padding: const EdgeInsets.all(10),
+                              color: ThemeColors.clrTransparent,
+                              child: Image.asset(
+                                signInController.isPasswordVisible.value
+                                    ? ImageConstants.imgPasswordDisable
+                                    : ImageConstants.imgPasswordEnable,
+                                height: 15,
+                                width: 15,
+                                color: ThemeColors.clrWhite,
+                              ),
                             ),
-                            onPressed: () {
+                            onTap: () {
                               signInController.isPasswordVisible.value =
                                   !signInController.isPasswordVisible.value;
                               signInController.isPasswordVisible.refresh();
@@ -161,18 +168,24 @@ class _SignInScreenState extends State<SignInScreen> {
               );
             }),
           ),
-          CheckboxListTile(
-            contentPadding: EdgeInsets.zero,
-            title: Text(
-              StringConstants.strRememberMe,
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: ThemeColors.clrWhite,
-                  ),
-            ),
-            value: true,
-            onChanged: (newValue) {},
-            controlAffinity: ListTileControlAffinity.leading,
-          ),
+          Obx(() {
+            return CheckboxListTile(
+              contentPadding: EdgeInsets.zero,
+              title: Text(
+                StringConstants.strRememberMe,
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: ThemeColors.clrWhite,
+                    ),
+              ),
+              value: signInController.isChecked.value,
+              onChanged: (newValue) {
+                signInController.isChecked.value =
+                    !signInController.isChecked.value;
+              },
+              controlAffinity: ListTileControlAffinity.leading,
+              side: const BorderSide(color: ThemeColors.accentColor),
+            );
+          }),
           Container(
             margin: const EdgeInsets.only(top: 50),
             height: 60,
@@ -184,6 +197,8 @@ class _SignInScreenState extends State<SignInScreen> {
                     signInController.isLoading.value = true;
                     await Future.delayed(const Duration(seconds: 2), () {
                       Get.toNamed(AppRoutes.dashboardPage);
+                      signInController.isLoading.value = false;
+                      signInController.isLoading.refresh();
                     });
                   }
                 },
@@ -222,7 +237,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   StringConstants.strCopyright2024Verasoft,
                   style: TextStyle(color: ThemeColors.clrWhite, fontSize: 8),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 25),
               ],
             ),
           ),

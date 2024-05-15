@@ -5,7 +5,7 @@ class ThemeColors {
   static const Color clrBlack = Colors.black;
   static const Color clrBlack50 = Color(0xFF151513);
   static const Color clrBlack100 = Color(0xFF0B1110);
-  static const Color clrBlack700 = Color(0x99000000);
+  static const Color clrBlack700 = Color(0xBB000000);
   static const Color clrAccentBlack = Color(0xFF2291D6);
   static const Color accentColor = Color(0xFF2291D6);
   static const Color accentDisableColor = Color(0x552291D6);
@@ -19,6 +19,7 @@ class ThemeColors {
   static const Color clrBg = Color(0xFF000000);
   static const Color clrArrow = Color(0xFFCCCCCC);
   static const Color clrItem = Color(0xFF2F3132);
+  static const Color clrDarkGray = Color(0xFF222222);
   static const Color clrItemGreen = Color(0xFF17B780);
   static const Color clrItemYellow = Color(0xFFE0960B);
   static const Color clrDivider = Color(0xFF707070);
@@ -167,7 +168,6 @@ class AppTheme {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           textStyle: const TextStyle(
-            fontWeight: FontWeight.bold,
             fontSize: 16,
             color: ThemeColors.clrWhite,
           ),
@@ -340,7 +340,6 @@ class AppThemeDark {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           textStyle: const TextStyle(
-            fontWeight: FontWeight.bold,
             fontSize: 16,
           ),
         ),

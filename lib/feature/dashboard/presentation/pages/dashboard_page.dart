@@ -101,6 +101,8 @@ class DashboardPage extends StatelessWidget {
                 dashboardController.isLoading.value = true;
                 await Future.delayed(const Duration(seconds: 2), () {
                   Get.toNamed(AppRoutes.fullCountPage);
+                  dashboardController.isLoading.value = false;
+                  dashboardController.isLoading.refresh();
                 });
               },
               child: const NewCounts(),
@@ -109,10 +111,7 @@ class DashboardPage extends StatelessWidget {
         ),
         const Spacer(),
         Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 30,
-            vertical: 10,
-          ),
+          padding: const EdgeInsets.symmetric(vertical: 40,horizontal: 30),
           child: ElevatedButton.icon(
             onPressed: () async {},
             style: ElevatedButton.styleFrom(

@@ -29,6 +29,7 @@ class FullCount extends StatelessWidget {
                     color: ThemeColors.clrText,
                   ),
                 ),
+                SizedBox(height: 5),
                 Text(
                   "count #305032",
                   style: TextStyle(
@@ -48,7 +49,7 @@ class FullCount extends StatelessWidget {
                 Text(
                   StringConstants.strStarted,
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: 11,
                     color: ThemeColors.clrText,
                   ),
                 ),

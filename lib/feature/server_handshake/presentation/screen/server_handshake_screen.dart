@@ -32,7 +32,7 @@ class _ServerHandshakeScreenState extends State<ServerHandshakeScreen> {
                 Flexible(flex: 2, child: Container()),
                 Image.asset(ImageConstants.imgKeopLogo),
                 Padding(
-                  padding: const EdgeInsets.only(top: 50, bottom: 35),
+                  padding: const EdgeInsets.only(top: 50, bottom: 40),
                   child: Obx(() {
                     return serverHandshakeController.isConnecting.value
                         ? Column(
@@ -43,9 +43,7 @@ class _ServerHandshakeScreenState extends State<ServerHandshakeScreen> {
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodySmall
-                                    ?.copyWith(
-                                      color: ThemeColors.clrGrey,
-                                    ),
+                                    ?.copyWith(color: ThemeColors.clrGrey),
                               ),
                               const SizedBox(height: 15),
                               Text(
@@ -54,9 +52,7 @@ class _ServerHandshakeScreenState extends State<ServerHandshakeScreen> {
                                 style: Theme.of(context)
                                     .textTheme
                                     .titleLarge
-                                    ?.copyWith(
-                                      color: ThemeColors.clrWhite,
-                                    ),
+                                    ?.copyWith(color: ThemeColors.clrWhite),
                               ),
                             ],
                           )

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:keop/core/constants/string_constants.dart';
 import 'package:keop/core/constants/theme_constants.dart';
@@ -15,6 +16,7 @@ class Entry extends StatefulWidget {
 class _EntryState extends State<Entry> {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     return GetMaterialApp(
       title: StringConstants.strAppName,
       debugShowCheckedModeBanner: false,

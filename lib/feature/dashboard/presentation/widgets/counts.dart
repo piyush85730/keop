@@ -63,7 +63,7 @@ class Counts extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  StringConstants.strCounts,
+                  StringConstants.strCount,
                   style: TextStyle(
                     fontSize: 14,
                     color: ThemeColors.clrWhite,
