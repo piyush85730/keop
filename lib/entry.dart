@@ -24,7 +24,7 @@ class _EntryState extends State<Entry> {
       darkTheme: darkTheme(context),
       themeMode: ThemeMode.light,
       getPages: AppPage.list,
-      initialRoute: AppRoutes.serverHandshakeRoute,
+      initialRoute: AppRoutes.signInRoute,
     );
   }
 }

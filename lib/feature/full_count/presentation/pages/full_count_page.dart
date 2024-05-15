@@ -42,6 +42,7 @@ class FullCountPage extends StatelessWidget {
               color: ThemeColors.clrWhite,
             ),
           ),
+          const SizedBox(width: 20),
         ],
       ),
       body: ScaffoldBackground(

@@ -25,7 +25,7 @@ class NewCounts extends StatelessWidget {
           Icon(
             Icons.chevron_right,
             color: ThemeColors.clrArrow,
-            size: 15,
+            size: 30,
           ),
         ],
       ),

@@ -71,9 +71,9 @@ class DashboardPage extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(
             top: 20,
-            left: 40,
-            right: 40,
-            bottom: 40,
+            left: 30,
+            right: 25,
+            bottom: 35,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -93,7 +93,7 @@ class DashboardPage extends StatelessWidget {
           children: [
             const ProfileHeader(),
             const ChangeLocation(),
-            const SizedBox(height: 30),
+            const SizedBox(height: 45),
             const Counts(),
             const SizedBox(height: 30),
             GestureDetector(

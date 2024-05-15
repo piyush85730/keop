@@ -62,7 +62,7 @@ class Items extends StatelessWidget {
                 ),
                 SizedBox(height: 5),
                 Text(
-                  "100% ${StringConstants.strOf} 4,605",
+                  "100%${StringConstants.strOf}4,605",
                   style: TextStyle(fontSize: 12, color: ThemeColors.clrWhite),
                 ),
               ],

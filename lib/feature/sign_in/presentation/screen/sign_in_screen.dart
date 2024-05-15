@@ -168,24 +168,32 @@ class _SignInScreenState extends State<SignInScreen> {
               );
             }),
           ),
-          Obx(() {
-            return CheckboxListTile(
-              contentPadding: EdgeInsets.zero,
-              title: Text(
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Obx(() {
+                return Container(
+                  margin: const EdgeInsets.only(top: 10, right: 10,left: 5),
+                  height: 17,
+                  width: 17,
+                  child: Checkbox(
+                    value: signInController.isChecked.value,
+                    onChanged: (newValue) {
+                      signInController.isChecked.value =
+                          !signInController.isChecked.value;
+                    },
+                    side: const BorderSide(color: ThemeColors.clrArrow),
+                  ),
+                );
+              }),
+              Text(
                 StringConstants.strRememberMe,
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       color: ThemeColors.clrWhite,
                     ),
-              ),
-              value: signInController.isChecked.value,
-              onChanged: (newValue) {
-                signInController.isChecked.value =
-                    !signInController.isChecked.value;
-              },
-              controlAffinity: ListTileControlAffinity.leading,
-              side: const BorderSide(color: ThemeColors.accentColor),
-            );
-          }),
+              )
+            ],
+          ),
           Container(
             margin: const EdgeInsets.only(top: 50),
             height: 60,
