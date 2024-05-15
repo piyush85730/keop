@@ -22,7 +22,7 @@ class _EntryState extends State<Entry> {
       darkTheme: darkTheme(context),
       themeMode: ThemeMode.light,
       getPages: AppPage.list,
-      initialRoute: AppRoutes.dashboardPage,
+      initialRoute: AppRoutes.serverHandshakeRoute,
     );
   }
 }
